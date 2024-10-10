@@ -1,0 +1,20 @@
+﻿@model Animal
+
+<h1>Добавить новое животное</h1>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Название</label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label>Вид</label>
+        <input asp-for="Species" />
+    </div>
+    <div>
+        <label>Возраст</label>
+        <input asp-for="Age" />
+    </div>
+   
+    <button type="submit">Создать</button>
+</form>

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Animal>
+
+<h1>Список животных</h1>
+
+<a asp-action="Create">Добавить новое животное</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Вид</th>
+            <th>Возраст</th>
+            <th>Цена</th>
+            <th>Описание</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var animal in Model)
+        {
+            <tr>
+                <td>@animal.Name</td>
+                <td>@animal.Species</td>
+                <td>@animal.Age</td>
+            </tr>
+        }
+    </tbody>
+</table>
